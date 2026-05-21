@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Indica que es HTML5. Siempre primera línea. -->
+ 
+<html lang='es'>
+<!-- Elemento raíz. lang='es' ayuda a lectores de pantalla y buscadores. -->
+ 
+  <head>
+  <!-- Metadatos: el navegador los necesita pero no los muestra al usuario -->
+ 
+    <meta charset='UTF-8'>
+    <!-- Codificación de caracteres: soporta tildes, ñ, emojis -->
+ 
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Sin esto, en celular la página se ve muy pequeña -->
+ 
+    <title>TechStore - Tu tienda de tecnología</title>
+    <!-- Aparece en la pestaña del navegador y en Google -->
+ 
+    <link rel='stylesheet' href='estilos.css'>
+    <!-- Vincula el archivo CSS. El path es relativo al index.html -->
+    <!-- estilos.css debe estar en la misma carpeta que index.html -->
+  </head>
+ 
+  <body>
+    <header> 
+      <h1>Techstore</h1>
+      <nav>
+        <ul>
+          <li>Inicio</li>
+          <li>Productos</li>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+    </header>
+
+  <main>
+    <section>
+      <h2>Catálogo de productos</h2>
+      <article>
+        <h3>Accesorios</h3>
+            <ul>
+              <li>Mouse</li>
+              <li>Teclado</li>
+              <li>Pad</li>
+            </ul>
+      </article>
+
+      <article>
+        <h3>Consumibles</h3>
+            <ul>
+              <li>Tonner</li>
+              <li>Hojas</li>
+              <li>Tintas</li>
+            </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Ofertas y novedades</h2>
+        <ol>
+          <li>Air Mac</li>
+          <li>Monitor 24"</li>
+          <li>Teclado mecanico</li>
+        </ol>
+    </section>
+  </main>
+  <!-- Todo lo visible va acá -->
+    <script src='js/app.js'></script>
+
+    <!-- JS SIEMPRE al final del body, antes de la etiqueta de cierre -->
+    <!-- Si va en el head, el script corre antes de que exista el HTML -->
+    <!-- y document.getElementById('productos') devuelve null -->
+  </body>
+ 
+  <footer>
+    <h6>Fabián M. Corti - 2026</h6>
+  </footer>
+</html>
