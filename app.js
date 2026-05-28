@@ -132,7 +132,7 @@ const catalogo = [
   ),
   new Producto(
     'Sony WH-1000XM5', 'Sony', 420000, 0,
-    'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400'
+    'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dw=400'
   ),
   new Producto(
     'LG UltraGear 27GP850', 'LG', 480000, 6,
@@ -179,6 +179,7 @@ function crearTarjeta(producto) {
   ul.appendChild(liMarca);
   ul.appendChild(liStock);
 
+  //Precio
   const precio = document.createElement('p');
   precio.textContent = producto.precioFormateado;
   const ficha = document.createElement('p');
