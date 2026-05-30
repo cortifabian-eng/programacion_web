@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Agregado para que no tengamos que repetir el mismo padding y margin para cada elemento para que quede alineado. */
 /* Además, sumamos un width máximo. */
 
@@ -19,19 +24,24 @@ header {
 }
 
 SECTION h2 {
-    color:rgb(2, 40, 73);
+    color:rgb(44, 46, 48);
   margin-bottom: 10px;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 header h1 {
   color: white;
   text-align: center;
   text-shadow: 4px 4px 8px rgba(1, 1, 1, 2);
+  font-family: 'Arial Black', sans-serif;
 }
 
 section h3 {
   margin-bottom: 25px;
-  color:rgb(2, 40, 73);
+  color:rgb(44, 46, 48);
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 nav ul {
@@ -41,42 +51,53 @@ nav ul {
   padding: 0;
   margin: 0;
   color:aliceblue;
+  font-family: sans-serif;
 }
 
 body {
-  background-color: rgb(144, 163, 120);
+  background-color: rgb(220, 226, 235);
 }
 
 .tarjeta {
   background-color: rgb(56, 54, 54);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  padding: 0px; 
   width: calc(33.333% - 20px);
   margin: 10px;
+  overflow: hidden; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 1 300px;
 }
+
 
 .tarjeta img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .tarjeta h3 {
-  margin-top: 12px;
+  margin-top: 0px;
   color: rgb(243, 235, 235);
+  padding: 0px;
 }
 .tarjeta ul {
   list-style: none;
-  padding: 0;
-  margin: 12px 0;
+  padding: 0px;
+  margin: 12px;
   color: rgb(243, 235, 235);
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .tarjeta p {
   font-size: 18px;
   font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(243, 235, 235);
+  text-align: center;
+  padding: 0px;
 }
 
 .tarjeta button {
@@ -86,4 +107,23 @@ body {
   padding: 10px 16px;
   border-radius: 4px;
   cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tarjeta button:disabled {
+  background-color: #9b2727;
+  cursor: not-allowed;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+  background-color: #797878;
+  color: rgb(245, 242, 242);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }

@@ -75,7 +75,7 @@ class Celular extends Producto {
     this.almacenamientoGB = almacenamientoGB;
   }
   fichaTecnica() {
-    return `${this.nombre}  / ${this.pantallaPulgadas} / ${this.almacenamientoGB}`
+    return `${this.pantallaPulgadas} / ${this.almacenamientoGB}`
   }
 }
 
@@ -122,13 +122,15 @@ class PCescritorio extends Producto {
 // ── Catálogo de productos ────────────────────────────────────
 // Array global — definido fuera de cualquier función o clase
 const catalogo = [
-  new Producto(
+  new Notebook(
     'MacBook Air M2', 'Apple', 2100000, 4,
-    'https://images.unsplash.com/photo-1659135890064-d57187f0946c?w=400'
+    'https://images.unsplash.com/photo-1659135890064-d57187f0946c?w=400',
+    'Intel i7', 16, 512, 14
   ),
-  new Producto(
+  new Celular(
     'iPhone 15', 'Apple', 1650000, 12,
-    'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400'
+    'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400',
+    6.1, 4000, 48, 256
   ),
   new Producto(
     'Sony WH-1000XM5', 'Sony', 420000, 0,
