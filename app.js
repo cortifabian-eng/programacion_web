@@ -62,7 +62,7 @@ class Notebook extends Producto {
     this.pantallaPulgadas = pantallaPulgadas
   }
   fichaTecnica() {
-    return `${this.nombre}  / ${this.procesador} / ${this.almacenamientoGB}` 
+    return `${this.nombre}, ${this.procesador}, ${this.almacenamientoGB}` 
   }
 }
 
@@ -75,7 +75,7 @@ class Celular extends Producto {
     this.almacenamientoGB = almacenamientoGB;
   }
   fichaTecnica() {
-    return `${this.pantallaPulgadas} / ${this.almacenamientoGB}`
+    return `${this.pantallaPulgadas}, ${this.almacenamientoGB}, ${this.bateriaMah}mAh`
   }
 }
 
@@ -87,7 +87,7 @@ class Auricular extends Producto {
       this.cancelacionRuido = cancelacionRuido;
     }
     fichaTecnica() {
-      return `${this.nombre}  / ${this.tipo} / ${this.wireless ? 'Wireless' : 'Con cable'} / ${this.cancelacionRuido ? 'Con cancelación de ruido' : 'Sin cancelación de ruido' }`;
+      return `${this.tipo}, ${this.wireless ? 'Wireless' : 'Con cable'}, ${this.cancelacionRuido ? 'Con cancelación de ruido' : 'Sin cancelación de ruido' }`;
     }
 }
 
@@ -100,7 +100,7 @@ class Monitor extends Producto {
     this.Hz = Hz;
   }
   fichaTecnica() {
-    return `${this.nombre}  / ${this.pulgadas} / ${this.resolucion} / ${this.tipoPanel} / ${this.Hz}Hz`
+    return `${this.nombre}, ${this.pulgadas}, ${this.resolucion}, ${this.tipoPanel}, ${this.Hz}Hz`
   }
 }
 
@@ -114,7 +114,7 @@ class PCescritorio extends Producto {
     this.fuenteW = fuenteW;
   }
   fichaTecnica() {
-    return `${this.nombre}  / ${this.procesador} / ${this.ramGB}GB / ${this.almacenamientoGB}GB / ${this.placaVideo} / ${this.fuenteW}W`
+    return `${this.procesador}, ${this.ramGB}GB, ${this.almacenamientoGB}GB, ${this.placaVideo}`
   }
 }
 
@@ -130,19 +130,22 @@ const catalogo = [
   new Celular(
     'iPhone 15', 'Apple', 1650000, 12,
     'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400',
-    6.1, 4000, 48, 256
+    '6.1"', 4000, 48, 256
   ),
-  new Producto(
+  new Auricular(
     'Sony WH-1000XM5', 'Sony', 420000, 0,
-    'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dw=400'
+    'https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dw=400',
+    `Sony WH`, `Wireless`, `Con cancelación de ruido`
   ),
-  new Producto(
+  new Monitor(
     'LG UltraGear 27GP850', 'LG', 480000, 6,
-    'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400'
+    'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400',
+    `LG 27"`, `1920x1080`, `IPS`, `144Hz`
   ),
-  new Producto(
+  new PCescritorio(
     'PC Gamer Entry Level', 'Armada', 1200000, 5,
-    'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400'
+    'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400',
+    'Intel i5', 16, 512, 'GTX 1660 Super', 650
   ),
 ];
 

@@ -30,28 +30,41 @@
           <li><a href="#productos">Productos</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="registro.html">Login</a></li>
-          <li><a href="nuevoproducto.html">Nuevo Producto</a></li>
           <button class="btn-carrito" id="btn-carrito">🛒<span class="contador-carrito" id="contador-carrito">0</span></button>
         </ul>
       </nav>
     </header>
-
   <main>
     <section>
-      <h2>Catálogo de productos</h2>
-      <h3>La mejor tecnología al mejor precio.</h3>
-      <div id='productos'>
-        <!-- Aquí se mostrarán los productos desde JavaScript -->
-      </div>
+      <h2>Iniciar sesión</h2>
+
+      <form id="form-login">
+        <div class="campo">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email"
+                 placeholder="tu@email.com" required>
+        </div>
+
+        <div class="campo">
+          <label for="password">Contraseña *</label>
+          <input type="password" id="password" name="password"
+                 placeholder="Tu contraseña" required>
+        </div>
+
+        <button type="submit">Iniciar sesión</button>
+
+      </form>
+
+      <p class="link-pie">
+        ¿No tenés cuenta? <a href="registro.html">Registrate</a>
+      </p>
+
     </section>
   </main>
-  <!-- Todo lo visible va acá -->
-    <script src='js/app.js'></script>
+    <script src='js/form.js'></script>
 
     
-  </body>
- 
   <footer>
     <h6>Fabián M. Corti - 2026</h6>
   </footer>
-</html>
+
