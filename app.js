@@ -62,7 +62,7 @@ class Notebook extends Producto {
     this.pantallaPulgadas = pantallaPulgadas
   }
   fichaTecnica() {
-    return `${this.nombre}, ${this.procesador}, ${this.almacenamientoGB}` 
+    return `${this.nombre} | ${this.procesador} | ${this.almacenamientoGB}GB  ${this.ramGB}GB RAM | ${this.pantallaPulgadas} pulgadas` 
   }
 }
 
@@ -75,7 +75,7 @@ class Celular extends Producto {
     this.almacenamientoGB = almacenamientoGB;
   }
   fichaTecnica() {
-    return `${this.pantallaPulgadas}, ${this.almacenamientoGB}, ${this.bateriaMah}mAh`
+    return `${this.nombre} | ${this.pantallaPulgadas} | ${this.almacenamientoGB} | ${this.bateriaMah}mAh  ${this.camaraMp} Megapíxeles` 
   }
 }
 
@@ -87,7 +87,7 @@ class Auricular extends Producto {
       this.cancelacionRuido = cancelacionRuido;
     }
     fichaTecnica() {
-      return `${this.tipo}, ${this.wireless ? 'Wireless' : 'Con cable'}, ${this.cancelacionRuido ? 'Con cancelación de ruido' : 'Sin cancelación de ruido' }`;
+      return `${this.tipo} | ${this.wireless ? 'Wireless' : 'Con cable'} | ${this.cancelacionRuido ? 'Con cancelación de ruido' : 'Sin cancelación de ruido' }`;
     }
 }
 
@@ -100,7 +100,7 @@ class Monitor extends Producto {
     this.Hz = Hz;
   }
   fichaTecnica() {
-    return `${this.nombre}, ${this.pulgadas}, ${this.resolucion}, ${this.tipoPanel}, ${this.Hz}Hz`
+    return `${this.nombre} | ${this.pulgadas}  ${this.resolucion} | ${this.tipoPanel} | ${this.Hz}Hz`
   }
 }
 
@@ -114,8 +114,10 @@ class PCescritorio extends Producto {
     this.fuenteW = fuenteW;
   }
   fichaTecnica() {
-    return `${this.procesador}, ${this.ramGB}GB, ${this.almacenamientoGB}GB, ${this.placaVideo}`
+    return `${this.procesador} | ${this.ramGB}GB | ${this.almacenamientoGB}GB | ${this.placaVideo}`
   }
+
+
 }
 
 
@@ -130,7 +132,7 @@ const catalogo = [
   new Celular(
     'iPhone 15', 'Apple', 1650000, 12,
     'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400',
-    '6.1"', 4000, 48, 256
+    '6.1"', 4000, 48, 256, 'Brown'
   ),
   new Auricular(
     'Sony WH-1000XM5', 'Sony', 420000, 0,
@@ -146,6 +148,12 @@ const catalogo = [
     'PC Gamer Entry Level', 'Armada', 1200000, 5,
     'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400',
     'Intel i5', 16, 512, 'GTX 1660 Super', 650
+  ),
+
+  new Notebook(
+    'Dell XPS 13', 'Dell', 1800000, 3,
+    'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400',
+    'Intel i7', 16, 512, 13.3
   ),
 ];
 

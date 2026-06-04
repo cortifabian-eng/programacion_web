@@ -9,8 +9,26 @@
   flex-wrap: wrap;
 }
 
-/* Agregado para que no tengamos que repetir el mismo padding y margin para cada elemento para que quede alineado. */
-/* Además, sumamos un width máximo. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main, .contenido-principal {
+  flex: 1 0 auto; 
+}
+
+
+footer {
+  flex-shrink: 0;
+  background: #eee; 
+}
 
 main {
   padding: 32px 24px;
@@ -24,7 +42,7 @@ header {
 }
 
 SECTION h2 {
-    color:rgb(44, 46, 48);
+  color:rgb(44, 46, 48);
   margin-bottom: 10px;
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -36,7 +54,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #0a062e;
+  background-color: #26456d;
 }
 
 header h1 {
@@ -54,6 +72,7 @@ section h3 {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+
 nav ul {
   display: flex;
   list-style: none;
@@ -66,7 +85,7 @@ nav ul {
 
 nav a {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   color: white;
   font-weight: bold;
 }
@@ -191,4 +210,73 @@ section p {
   margin-top: 20px;
   color:rgb(44, 46, 48);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primario: #2563eb;
+  --borde: #d1d5db;
+  --texto: #1f2937;
+  --fondo: #ffffff;
+}
+
+#form-login {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--fondo);
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--texto);
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  box-sizing: border-box; /* Crucial para que el padding no rompa el ancho */
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al hacer clic en el input */
+input:focus {
+  outline: none;
+  border-color: var(--primario);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primario);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #1d4ed8;
 }
